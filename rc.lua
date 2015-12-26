@@ -41,8 +41,8 @@ end
 beautiful.init("~/.config/awesome/themes/custom/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "sakura"
+editor = "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
