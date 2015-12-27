@@ -42,7 +42,7 @@ theme.menu_fg_normal                = "#aaaaaa"
 theme.menu_fg_focus                 = "#ff8c00"
 theme.menu_bg_normal                = "#050505dd"
 theme.menu_bg_focus                 = "#050505dd"
-theme.useless_gap_width 	    = 10
+theme.useless_gap_width 	    = 12
 
 theme.submenu_icon                  = theme.confdir .. "/icons/submenu.png"
 theme.widget_temp                   = theme.confdir .. "/icons/temp.png"
