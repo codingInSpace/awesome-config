@@ -72,6 +72,7 @@ editor_cmd = terminal .. " -e " .. editor
 --mail       = terminal .. " -e mutt "
 
 local layouts = {
+    lain.layout.uselesstile,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
