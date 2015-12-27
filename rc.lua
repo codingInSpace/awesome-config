@@ -512,19 +512,19 @@ globalkeys = awful.util.table.join(
     awful.key({ altkey,           }, "w",      function () myweather.show(7) end),
 
     -- ALSA volume control
-    awful.key({ altkey }, "Up",
+    awful.key({  }, "XF86AudioRaiseVolume",
         function ()
-            os.execute(string.format("amixer set %s 1%%+", volumewidget.channel))
+	    awful.util.spawn("amixer set Master 5%+", false)
             volumewidget.update()
         end),
-    awful.key({ altkey }, "Down",
+    awful.key({ }, "XF86AudioLowerVolume",
         function ()
-            os.execute(string.format("amixer set %s 1%%-", volumewidget.channel))
+	    awful.util.spawn("amixer set Master 5%-", false)
             volumewidget.update()
         end),
-    awful.key({ altkey }, "m",
+    awful.key({  }, "XF86AudioMute",
         function ()
-            os.execute(string.format("amixer set %s toggle", volumewidget.channel))
+	    awful.util.spawn("amixer set Master toggle", false)
             volumewidget.update()
         end),
     awful.key({ altkey, "Control" }, "m",
