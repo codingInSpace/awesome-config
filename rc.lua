@@ -65,6 +65,7 @@ editor     = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
+music = "sakura -e /home/jonathan/Scripts/musicStart.sh"
 --browser    = "dwb"
 --browser2   = "iron"
 --gui_editor = "gvim"
@@ -534,6 +535,10 @@ globalkeys = awful.util.table.join(
             os.execute(string.format("amixer set %s 100%%", volumewidget.channel))
             volumewidget.update()
         end),
+
+
+		-- music
+    awful.key({ modkey }, "p", function () awful.util.spawn( music ) end),
 
     -- Brightness
     awful.key({ altkey }, "F5",
