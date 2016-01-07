@@ -1,18 +1,18 @@
 
 --[[
                                       
-     Multicolor Awesome WM config 2.0 
-     github.com/copycat-killer        
+     Spring Awesome WM config 2.0 
+		 Adapted from github.com/copycat-killer multicolor        
                                       
 --]]
 
 
 theme                               = {}
 
-theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
-theme.wallpaper                     = theme.confdir .. "/wall2.jpg"
+theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/spring"
+theme.wallpaper                     = theme.confdir .. "/wall3.png"
 
-theme.font                          = "Terminus 8"
+theme.font                          = "Terminus 10"
 --theme.taglist_font                =
 theme.menu_bg_normal                = "#000000"
 theme.menu_bg_focus                 = "#000000"
@@ -20,8 +20,8 @@ theme.bg_normal                     = "#000000"
 theme.bg_focus                      = "#000000"
 theme.bg_urgent                     = "#000000"
 theme.fg_normal                     = "#aaaaaa"
-theme.fg_focus                      = "#ff8c00"
-theme.fg_urgent                     = "#af1d18"
+theme.fg_focus                      = "#00e6ac"
+theme.fg_urgent                     = "#ff66a3"
 theme.fg_minimize                   = "#ffffff"
 theme.fg_black                      = "#424242"
 theme.fg_red                        = "#ce5666"
@@ -39,7 +39,7 @@ theme.border_marked                 = "#3ca4d8"
 theme.menu_width                    = "110"
 theme.menu_border_width             = "0"
 theme.menu_fg_normal                = "#aaaaaa"
-theme.menu_fg_focus                 = "#ff8c00"
+theme.menu_fg_focus                 = "#80e5ff"
 theme.menu_bg_normal                = "#050505dd"
 theme.menu_bg_focus                 = "#050505dd"
 theme.useless_gap_width 	    = 12

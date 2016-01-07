@@ -1,7 +1,7 @@
 --[[
                                       
-     Multicolor Awesome WM config 2.0 
-     github.com/copycat-killer        
+      Spring Awesome WM config 2.0 
+      Adapted from github.com/copycat-killer multicolor        
                                       
 --]]
 
@@ -55,7 +55,7 @@ run_once("unclutter -root")
 -- {{{ Variable definitions
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/multicolor/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/spring/theme.lua")
 
 -- common
 modkey     = "Mod4"
@@ -127,7 +127,7 @@ mytextclock = lain.widgets.abase({
 
         for i=1,3 do t_output = t_output .. " " .. o_it(i) end
 
-        widget:set_markup(markup("#7788af", t_output) .. markup("#343639", " > ") .. markup("#de5e1e", o_it(1)) .. " ")
+        widget:set_markup(markup("#e5f9ff", t_output) .. markup("#002233", " > ") .. markup("#ccb3ff", o_it(1)) .. " ")
     end
 })
 
@@ -149,7 +149,7 @@ myweather = lain.widgets.weather({
 fsicon = wibox.widget.imagebox(beautiful.widget_fs)
 fswidget = lain.widgets.fs({
     settings  = function()
-        widget:set_markup(markup("#80d9d8", fs_now.used .. "% "))
+        widget:set_markup(markup("#00e6ac", fs_now.used .. "% "))
     end
 })
 
@@ -179,7 +179,7 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.widget_cpu)
 cpuwidget = lain.widgets.cpu({
     settings = function()
-        widget:set_markup(markup("#e33a6e", cpu_now.usage .. "% "))
+        widget:set_markup(markup("#e5f9ff", cpu_now.usage .. "% "))
     end
 })
 
@@ -187,7 +187,7 @@ cpuwidget = lain.widgets.cpu({
 tempicon = wibox.widget.imagebox(beautiful.widget_temp)
 tempwidget = lain.widgets.temp({
     settings = function()
-        widget:set_markup(markup("#f1af5f", coretemp_now .. "°C "))
+        widget:set_markup(markup("#e5f9ff", coretemp_now .. "°C "))
     end
 })
 
@@ -200,7 +200,8 @@ batwidget = lain.widgets.bat({
         else
             perc = bat_now.perc .. "% "
         end
-        widget:set_text(perc)
+        --widget:set_text(perc)
+        widget:set_markup(markup("#00e6ac", perc))
     end
 })
 
@@ -212,7 +213,7 @@ volumewidget = lain.widgets.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup("#7493d2", volume_now.level .. "% "))
+        widget:set_markup(markup("#e5f9ff", volume_now.level .. "% "))
     end
 })
 
@@ -230,8 +231,8 @@ netupinfo = lain.widgets.net({
             myweather.update()
         end
 
-        widget:set_markup(markup("#e54c62", net_now.sent .. " "))
-        netdowninfo:set_markup(markup("#87af5f", net_now.received .. " "))
+        widget:set_markup(markup("#00e6ac", net_now.sent .. " "))
+        netdowninfo:set_markup(markup("#e5f9ff", net_now.received .. " "))
     end
 })
 
@@ -239,7 +240,7 @@ netupinfo = lain.widgets.net({
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
-        widget:set_markup(markup("#e0da37", mem_now.used .. "M "))
+        widget:set_markup(markup("#00e6ac", mem_now.used .. "M "))
     end
 })
 
@@ -264,7 +265,7 @@ mpdwidget = lain.widgets.mpd({
             title  = ""
             mpdicon:set_image(nil)
         end
-        widget:set_markup(markup("#e54c62", artist) .. markup("#b2b2b2", title))
+        widget:set_markup(markup("#ccb3ff", artist) .. markup("#b2b2b2", title))
     end
 })
 
