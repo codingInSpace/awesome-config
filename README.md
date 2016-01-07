@@ -1,1 +1,1 @@
-![alt tag](https://raw.github.com/codingInSpace/awesome-config/blob/master/themes/spring/screenshots/screenFetch-2016-01-07_18-09-55.png)
+![alt tag](https://github.com/codingInSpace/awesome-config/blob/master/themes/spring/screenshots/screenFetch-2016-01-07_18-09-55.png)
