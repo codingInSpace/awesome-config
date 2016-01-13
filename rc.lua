@@ -402,10 +402,10 @@ for s = 1, screen.count() do
     bottom_right_layout:add(mylayoutbox[s])
 
     -- Now bring it all together (with the tasklist in the middle)
-    bottom_layout = wibox.layout.align.horizontal()
-    bottom_layout:set_left(bottom_left_layout)
-    bottom_layout:set_middle(mytasklist[s])
-    bottom_layout:set_right(bottom_right_layout)
+    bottom_layout = wibox.layout.align.horizontal()  
+    bottom_layout:set_left(bottom_left_layout)  
+    bottom_layout:set_middle(mytasklist[s])  
+    bottom_layout:set_right(bottom_right_layout) 
     mybottomwibox[s]:set_widget(bottom_layout)
 end
 -- }}}
@@ -422,7 +422,8 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     -- Take a screenshot
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end),
+		-- awful.key({ modkey }, "s", function() awful.util.spawn("sakura -e scrot -s ~/Pictures/screenshot%Y%b%d-%H:%M.jpg") end),
+		awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/screenshots/screenshot-%d%m%Y-%H:%M.jpg 2>/dev/null'") end),
 
     -- Tag browsing
     awful.key({ modkey }, "Left",   awful.tag.viewprev       ),
