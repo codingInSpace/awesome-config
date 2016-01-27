@@ -1,6 +1,6 @@
 --[[
                                       
-      Spring Awesome WM config 2.0 
+      Coffee Awesome WM config 2.0 
       Adapted from github.com/copycat-killer multicolor        
                                       
 --]]
@@ -55,7 +55,7 @@ run_once("unclutter -root")
 -- {{{ Variable definitions
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/spring/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/coffee/theme.lua")
 
 -- common
 modkey     = "Mod4"
@@ -127,7 +127,7 @@ mytextclock = lain.widgets.abase({
 
         for i=1,3 do t_output = t_output .. " " .. o_it(i) end
 
-        widget:set_markup(markup("#e5f9ff", t_output) .. markup("#002233", " > ") .. markup("#ccb3ff", o_it(1)) .. " ")
+        widget:set_markup(markup("#ffeee5", t_output) .. markup("#002233", " > ") .. markup("#ff9933", o_it(1)) .. " ")
     end
 })
 
@@ -149,7 +149,7 @@ myweather = lain.widgets.weather({
 fsicon = wibox.widget.imagebox(beautiful.widget_fs)
 fswidget = lain.widgets.fs({
     settings  = function()
-        widget:set_markup(markup("#00e6ac", fs_now.used .. "% "))
+        widget:set_markup(markup("#ffeee5", fs_now.used .. "% "))
     end
 })
 
@@ -179,7 +179,7 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.widget_cpu)
 cpuwidget = lain.widgets.cpu({
     settings = function()
-        widget:set_markup(markup("#e5f9ff", cpu_now.usage .. "% "))
+        widget:set_markup(markup("#ffeee5", cpu_now.usage .. "% "))
     end
 })
 
@@ -201,7 +201,7 @@ batwidget = lain.widgets.bat({
             perc = bat_now.perc .. "% "
         end
         --widget:set_text(perc)
-        widget:set_markup(markup("#00e6ac", perc))
+        widget:set_markup(markup("#ffeee5", perc))
     end
 })
 
@@ -213,7 +213,7 @@ volumewidget = lain.widgets.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup("#e5f9ff", volume_now.level .. "% "))
+        widget:set_markup(markup("#ffeee5", volume_now.level .. "% "))
     end
 })
 
@@ -240,7 +240,7 @@ netupinfo = lain.widgets.net({
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
-        widget:set_markup(markup("#00e6ac", mem_now.used .. "M "))
+        widget:set_markup(markup("#ffeee5", mem_now.used .. "M "))
     end
 })
 
@@ -361,10 +361,10 @@ for s = 1, screen.count() do
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     --right_layout:add(mailicon)
     --right_layout:add(mailwidget)
-    right_layout:add(netdownicon)
-    right_layout:add(netdowninfo)
-    right_layout:add(netupicon)
-    right_layout:add(netupinfo)
+    --right_layout:add(netdownicon)
+    --right_layout:add(netdowninfo)
+    --right_layout:add(netupicon)
+    --right_layout:add(netupinfo)
     right_layout:add(volicon)
     right_layout:add(volumewidget)
     right_layout:add(memicon)
@@ -375,8 +375,8 @@ for s = 1, screen.count() do
     right_layout:add(fswidget)
     --right_layout:add(weathericon)
     --right_layout:add(myweather)
-    right_layout:add(tempicon)
-    right_layout:add(tempwidget)
+    --right_layout:add(tempicon)
+    --right_layout:add(tempwidget)
     right_layout:add(baticon)
     right_layout:add(batwidget)
     right_layout:add(clockicon)
