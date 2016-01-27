@@ -127,7 +127,7 @@ mytextclock = lain.widgets.abase({
 
         for i=1,3 do t_output = t_output .. " " .. o_it(i) end
 
-        widget:set_markup(markup("#ffeee5", t_output) .. markup("#002233", " > ") .. markup("#ff9933", o_it(1)) .. " ")
+        widget:set_markup(markup("#ffeee5", t_output) .. markup("#002233", " > ") .. markup("#ffa28d", o_it(1)) .. " ")
     end
 })
 
