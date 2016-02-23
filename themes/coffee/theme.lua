@@ -12,7 +12,7 @@ theme                               = {}
 theme.confdir                       = os.getenv("HOME") .. "/.config/awesome/themes/coffee"
 theme.wallpaper                     = theme.confdir .. "/wall.jpg"
 
-theme.font                          = "Terminus 12"
+theme.font                          = "Liberation Mono 12"
 --theme.taglist_font                =
 theme.menu_bg_normal                = "#000000"
 theme.menu_bg_focus                 = "#000000"
