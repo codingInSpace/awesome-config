@@ -55,7 +55,7 @@ run_once("unclutter -root")
 -- {{{ Variable definitions
 
 -- beautiful init
-beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/warmbloom/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/coffee/theme.lua")
 
 -- common
 modkey     = "Mod4"
