@@ -584,7 +584,8 @@ globalkeys = awful.util.table.join(
     --awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
 
     -- Prompt
-    awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
+    --awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey }, "r", function () awful.util.spawn("rofi -show run") end),
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run({ prompt = "Run Lua code: " },
