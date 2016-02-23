@@ -127,7 +127,7 @@ mytextclock = lain.widgets.abase({
 
         for i=1,3 do t_output = t_output .. " " .. o_it(i) end
 
-        widget:set_markup(markup("#ffeee5", t_output) .. markup("#002233", " > ") .. markup("#ffa28d", o_it(1)) .. " ")
+        widget:set_markup(markup("#ffe6ff", t_output) .. " " .. markup("#fd9ad0", o_it(1)) .. " ")
     end
 })
 
@@ -149,7 +149,7 @@ myweather = lain.widgets.weather({
 fsicon = wibox.widget.imagebox(beautiful.widget_fs)
 fswidget = lain.widgets.fs({
     settings  = function()
-        widget:set_markup(markup("#ffeee5", fs_now.used .. "% "))
+        widget:set_markup(markup("#ffe6ff", fs_now.used .. "% "))
     end
 })
 
@@ -179,7 +179,7 @@ cpuicon = wibox.widget.imagebox()
 cpuicon:set_image(beautiful.widget_cpu)
 cpuwidget = lain.widgets.cpu({
     settings = function()
-        widget:set_markup(markup("#ffeee5", cpu_now.usage .. "% "))
+        widget:set_markup(markup("#ffe6ff", cpu_now.usage .. "% "))
     end
 })
 
@@ -201,7 +201,7 @@ batwidget = lain.widgets.bat({
             perc = bat_now.perc .. "% "
         end
         --widget:set_text(perc)
-        widget:set_markup(markup("#ffeee5", perc))
+        widget:set_markup(markup("#ffe6ff", perc))
     end
 })
 
@@ -213,7 +213,7 @@ volumewidget = lain.widgets.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup("#ffeee5", volume_now.level .. "% "))
+        widget:set_markup(markup("#ffe6ff", volume_now.level .. "% "))
     end
 })
 
@@ -240,7 +240,7 @@ netupinfo = lain.widgets.net({
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
 memwidget = lain.widgets.mem({
     settings = function()
-        widget:set_markup(markup("#ffeee5", mem_now.used .. "M "))
+        widget:set_markup(markup("#ffe6ff", mem_now.used .. "M "))
     end
 })
 
@@ -346,7 +346,8 @@ for s = 1, screen.count() do
     mytasklist[s] = awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons)
 
     -- Create the upper wibox
-    mywibox[s] = awful.wibox({ position = "top", screen = s, height = 20 })
+    mywibox[s] = awful.wibox({ position = "top", screen = s, height = 20, bg =
+beautiful.wibox_bg_normal })
     --border_width = 0, height =  20 })
 
     -- Widgets that are aligned to the upper left
@@ -379,7 +380,7 @@ for s = 1, screen.count() do
     --right_layout:add(tempwidget)
     right_layout:add(baticon)
     right_layout:add(batwidget)
-    right_layout:add(clockicon)
+    --right_layout:add(clockicon)
     right_layout:add(mytextclock)
 
     -- Now bring it all together (with the tasklist in the middle)
@@ -391,7 +392,7 @@ for s = 1, screen.count() do
     mywibox[s]:set_widget(layout)
 
     -- Create the bottom wibox
-    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, border_width = 0, height = 20 })
+    mybottomwibox[s] = awful.wibox({ position = "bottom", screen = s, border_width = 0, height = 20, bg = beautiful.wibox_bg_normal })
     --mybottomwibox[s].visible = false
 
     -- Widgets that are aligned to the bottom left
